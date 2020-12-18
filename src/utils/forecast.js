@@ -11,6 +11,7 @@ const forecast = (lat, long, callback) => {
       callback('Unable to find location! Try again.', undefined);
     } else {
       callback(undefined, `${body.daily.data[0].summary}
+      <br>
       Trenutno je ${body.currently.temperature} stepeni Celzijusa uz ${body.currently.precipProbability}% mogućnosti padavina.
       Najniža temperatura danas je ${body.daily.data[0].temperatureLow}.
       Najviša temperatura danas je ${body.daily.data[0].temperatureHigh}.`);
